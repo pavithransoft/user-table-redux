@@ -20,7 +20,7 @@ export const addUser = (user) => async (dispatch) => {
     );
     dispatch({
       type: "ADD_USER",
-      payload: { ...response.data, id: Math.random() * 1000 },
+      payload: { ...response.data, id: user.id + 1 },
     });
   } catch (error) {
     console.error("Error adding user:", error);
